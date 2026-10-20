@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Track your rental applications and hostel booking requests in Karachi. Contact numbers are unlocked upon broker approval.">
+  <title>My Requests - Tenant Applications | Flatora</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL HEADER & NAVBAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container-wide">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <a href="index.html" class="brand" aria-label="Flatora Homepage">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Flatora<span>.</span></span>
+            <span class="brand-tagline">Naya shehar, apna thikana</span>
+          </div>
+        </a>
+
+        <!-- Pure CSS Hamburger Checkbox Toggle -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
+        <label for="nav-toggle" class="nav-toggle-label" title="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </label>
+
+        <!-- Navbar Menu Links -->
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            Home
+          </a>
+          <a href="listings.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Properties
+          </a>
+          <a href="my-requests.html" class="nav-link active" aria-current="page">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            My Requests
+          </a>
+          <a href="broker-dashboard.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            Broker Dashboard
+          </a>
+          <a href="admin-dashboard.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Admin
+          </a>
+          <a href="contact.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            Contact
+          </a>
+
+          <div class="nav-actions">
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <div class="broker-avatar" style="width: 34px; height: 34px; background: var(--teal-soft); color: var(--primary-teal);">BA</div>
+              <span style="font-size: 0.825rem; font-weight: 700; color: var(--ink-heading);">Bilal Ahmed</span>
+            </div>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT: TENANT MY REQUESTS
+       ======================================================================== -->
+  <main class="page-wrapper fade-in-up">
+    
+    <!-- Top Summary Banner -->
+    <section class="section-tint" style="padding: 1.75rem 0;">
+      <div class="container">
+        
+        <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <span class="section-eyebrow">Tenant Application Portal</span>
+            <h1 style="font-size: 1.6rem; margin-bottom: 0.25rem;">My Housing Requests</h1>
+            <p style="font-size: 0.85rem; color: var(--muted-text);">
+              Review status, track landlord approvals, and unlock direct broker contact numbers.
+            </p>
+          </div>
+          <a href="listings.html" class="btn btn-outline btn-sm">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            Browse More Properties
+          </a>
+        </div>
+
+        <!-- 4 Stat Counters for the 4 Lifecycle States -->
+        <div class="grid grid-cols-4 gap-3" style="margin-top: 1.5rem;">
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-amber">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            </div>
+            <div>
+              <div class="stat-value">1</div>
+              <div class="stat-label">Pending Review</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon stat-icon-teal">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div>
+              <div class="stat-value">1</div>
+              <div class="stat-label">Approved (Active)</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" style="background: #FEE2E2; color: #DC2626;">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+            </div>
+            <div>
+              <div class="stat-value">1</div>
+              <div class="stat-label">Rejected</div>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon" style="background: var(--surface-alt); color: var(--muted-text);">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"></path></svg>
+            </div>
+            <div>
+              <div class="stat-value">1</div>
+              <div class="stat-label">Cancelled</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: THE 4 REQUEST CARDS (ONE FOR EACH STATUS) -->
+    <section class="section">
+      <div class="container">
+        
+        <div class="section-header text-left" style="margin-bottom: 1.5rem;">
+          <h2 style="font-size: 1.3rem;">Application History & Mutual Contact Access</h2>
+          <p class="section-subtitle">Demonstrating all 4 business states of Flatora's protected contact sharing architecture.</p>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          
+          <!-- ==============================================================
+               CARD 1: STATUS = PENDING (Contact Locked)
+               ============================================================== -->
+          <div class="card" style="border-left: 4px solid var(--accent-amber);">
+            <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.65rem;">
+                <span class="badge badge-pending">Request Pending</span>
+                <span style="font-size: 0.8rem; color: var(--muted-text);">Applied on: <strong>October 18, 2026</strong></span>
+              </div>
+              <span style="font-size: 0.8rem; font-weight: 600; color: var(--muted-text);">Request ID: #REQ-9842</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4" style="align-items: center;">
+              <div>
+                <span class="badge badge-flat" style="margin-bottom: 0.4rem;">Family Flat</span>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.35rem;">
+                  <a href="property-details.html">Modern 2-Bed Family Flat, Block 13-D Gulshan-e-Iqbal</a>
+                </h3>
+                <div style="font-size: 0.825rem; color: var(--muted-text); margin-bottom: 0.6rem;">
+                  Near Disco Bakery, University Road, Karachi
+                </div>
+                <div style="font-size: 0.95rem; font-weight: 800; color: var(--primary-teal);">
+                  PKR 38,000 <span style="font-size: 0.75rem; font-weight: 500; color: var(--muted-text);">/ month (Advance: PKR 76,000)</span>
+                </div>
+                <div style="font-size: 0.825rem; color: var(--body-text); margin-top: 0.5rem;">
+                  <strong>Assigned Broker:</strong> Tariq Mahmood (Al-Raziq Real Estate)
+                </div>
+              </div>
+
+              <!-- Contact Box: LOCKED -->
+              <div style="background-color: #FFFBEB; border: 1px dashed var(--amber-border); border-radius: var(--radius-md); padding: 1.25rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: #92400E; font-weight: 700; margin-bottom: 0.4rem; font-size: 0.9rem;">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span>Broker Contact Locked</span>
+                </div>
+                <p style="font-size: 0.8rem; color: #78350F; line-height: 1.5; margin-bottom: 0.85rem;">
+                  Your request is awaiting Tariq Mahmood's approval. Direct mobile phone and WhatsApp details are securely hidden until the broker accepts your application.
+                </p>
+                <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 0.5rem;">
+                  <span style="font-size: 0.75rem; color: var(--muted-text);">Holding spot for 48 hours</span>
+                  <a href="#" class="btn btn-danger-outline btn-sm">Cancel Application</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==============================================================
+               CARD 2: STATUS = APPROVED (Contact Unlocked & WhatsApp Active)
+               ============================================================== -->
+          <div class="card" style="border-left: 4px solid var(--primary-teal); background: #FAFDFD;">
+            <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; border-bottom: 1px solid #CCFBF1; padding-bottom: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.65rem;">
+                <span class="badge badge-approved">Approved (Visit Scheduled)</span>
+                <span style="font-size: 0.8rem; color: var(--muted-text);">Approved on: <strong>October 17, 2026</strong></span>
+              </div>
+              <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-teal);">Request ID: #REQ-9830</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4" style="align-items: center;">
+              <div>
+                <span class="badge badge-girls" style="margin-bottom: 0.4rem;">Girls Hostel</span>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.35rem;">
+                  <a href="property-details.html">Safe Haven Girls Residency (Shared Cubicle)</a>
+                </h3>
+                <div style="font-size: 0.825rem; color: var(--muted-text); margin-bottom: 0.6rem;">
+                  PECHS Block 2, Karachi &bull; Full Address Unlocked: House 42-B, Commercial Area, PECHS 2
+                </div>
+                <div style="font-size: 0.95rem; font-weight: 800; color: var(--primary-teal);">
+                  PKR 18,500 <span style="font-size: 0.75rem; font-weight: 500; color: var(--muted-text);">/ bed / mo (3 Meals Included)</span>
+                </div>
+                <div style="font-size: 0.825rem; color: var(--body-text); margin-top: 0.5rem;">
+                  <strong>Hostel Warden / Broker:</strong> Mrs. Samina Farooq (Safe Haven Accommodations)
+                </div>
+              </div>
+
+              <!-- Contact Box: UNLOCKED WITH WHATSAPP -->
+              <div style="background-color: var(--teal-tint); border: 1px solid #99F6E4; border-radius: var(--radius-md); padding: 1.25rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: var(--primary-teal); font-weight: 700; margin-bottom: 0.4rem; font-size: 0.9rem;">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 9.9-1"></path></svg>
+                  <span>Mutual Contact Details Unlocked!</span>
+                </div>
+                
+                <p style="font-size: 0.8rem; color: var(--deep-teal); line-height: 1.5; margin-bottom: 0.85rem;">
+                  Mrs. Samina has reviewed and accepted your profile. Both parties are now connected. Please coordinate for the physical visit.
+                </p>
+
+                <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+                  <!-- Phone Number Display -->
+                  <div style="display: flex; align-items: center; justify-content: space-between; background: #FFFFFF; padding: 0.5rem 0.75rem; border-radius: var(--radius-sm); border: 1px solid #CCFBF1;">
+                    <span style="font-size: 0.775rem; color: var(--muted-text); font-weight: 600;">Phone Number:</span>
+                    <strong style="color: var(--ink-heading); font-family: var(--font-mono); font-size: 0.95rem;">+92 300 1234567</strong>
+                  </div>
+
+                  <!-- Direct WhatsApp Button (Styled with brand green #25D366) -->
+                  <a href="https://wa.me/923001234567" target="_blank" class="btn" style="background-color: #25D366; color: #FFFFFF !important; font-weight: 700; border-color: #20BA5A;" title="Open WhatsApp chat">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                      <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                    </svg>
+                    WhatsApp Mrs. Samina (+92 300 1234567)
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==============================================================
+               CARD 3: STATUS = REJECTED (With Reason)
+               ============================================================== -->
+          <div class="card" style="border-left: 4px solid var(--status-rejected);">
+            <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.65rem;">
+                <span class="badge badge-rejected">Request Rejected</span>
+                <span style="font-size: 0.8rem; color: var(--muted-text);">Decided on: <strong>October 14, 2026</strong></span>
+              </div>
+              <span style="font-size: 0.8rem; font-weight: 600; color: var(--muted-text);">Request ID: #REQ-9791</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4" style="align-items: center;">
+              <div>
+                <span class="badge badge-apartment" style="margin-bottom: 0.4rem;">Apartment</span>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.35rem;">
+                  <a href="property-details.html">Sea-Breeze Executive 3-Bed Apartment, Clifton Block 5</a>
+                </h3>
+                <div style="font-size: 0.825rem; color: var(--muted-text); margin-bottom: 0.6rem;">
+                  Clifton Block 5, Near Boat Basin, Karachi
+                </div>
+                <div style="font-size: 0.95rem; font-weight: 800; color: var(--primary-teal);">
+                  PKR 85,000 <span style="font-size: 0.75rem; font-weight: 500; color: var(--muted-text);">/ month</span>
+                </div>
+                <div style="font-size: 0.825rem; color: var(--body-text); margin-top: 0.5rem;">
+                  <strong>Broker:</strong> Rashid Hussain (Prime Coastal Realty)
+                </div>
+              </div>
+
+              <!-- Rejection Notice & Status Reset -->
+              <div style="background-color: #FEF2F2; border: 1px solid #FECACA; border-radius: var(--radius-md); padding: 1.25rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; color: #991B1B; font-weight: 700; margin-bottom: 0.4rem; font-size: 0.9rem;">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line></svg>
+                  <span>Broker Feedback Reason</span>
+                </div>
+                <p style="font-size: 0.825rem; color: #7F1D1D; line-height: 1.5; margin-bottom: 0.85rem;">
+                  "Landlord specifically requested a corporate executive tenancy with registered MNC guarantee. Property has automatically returned to the public Available pool."
+                </p>
+                <a href="listings.html" class="btn btn-outline btn-sm">Find Similar Apartments</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==============================================================
+               CARD 4: STATUS = CANCELLED (By Tenant)
+               ============================================================== -->
+          <div class="card" style="border-left: 4px solid var(--status-cancelled); opacity: 0.9;">
+            <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.75rem;">
+              <div style="display: flex; align-items: center; gap: 0.65rem;">
+                <span class="badge badge-cancelled">Cancelled by Tenant</span>
+                <span style="font-size: 0.8rem; color: var(--muted-text);">Cancelled on: <strong>October 10, 2026</strong></span>
+              </div>
+              <span style="font-size: 0.8rem; font-weight: 600; color: var(--muted-text);">Request ID: #REQ-9755</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4" style="align-items: center;">
+              <div>
+                <span class="badge badge-boys" style="margin-bottom: 0.4rem;">Boys Hostel</span>
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.35rem;">
+                  <a href="property-details.html">NED Scholar Boys Hostel (Fiber WiFi + UPS)</a>
+                </h3>
+                <div style="font-size: 0.825rem; color: var(--muted-text); margin-bottom: 0.6rem;">
+                  University Road, Gulshan Block 1, Karachi
+                </div>
+                <div style="font-size: 0.95rem; font-weight: 800; color: var(--primary-teal);">
+                  PKR 14,500 <span style="font-size: 0.75rem; font-weight: 500; color: var(--muted-text);">/ bed / mo</span>
+                </div>
+                <div style="font-size: 0.825rem; color: var(--body-text); margin-top: 0.5rem;">
+                  <strong>Broker:</strong> Asim Khan (NED Housing Network)
+                </div>
+              </div>
+
+              <div style="background-color: var(--surface-alt); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.25rem;">
+                <div style="font-weight: 700; color: var(--body-text); margin-bottom: 0.35rem; font-size: 0.875rem;">
+                  Application Closed
+                </div>
+                <p style="font-size: 0.8rem; color: var(--muted-text); line-height: 1.5; margin-bottom: 0.85rem;">
+                  You cancelled this request before broker review. No obligations were incurred. The bed remained open for other students.
+                </p>
+                <a href="listings.html?type=boys-hostel" class="btn btn-outline btn-sm">Explore Other Boys Hostels</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Educational Step Diagram Section -->
+        <div class="card" style="margin-top: 2.5rem; background: var(--teal-tint); border-color: #99F6E4;">
+          <h3 style="font-size: 1.15rem; color: var(--deep-teal); margin-bottom: 0.5rem;">
+            Why does Flatora protect tenant contact details?
+          </h3>
+          <p style="font-size: 0.875rem; color: var(--body-text); line-height: 1.6; margin-bottom: 1rem;">
+            Traditional Karachi estate brokerages broadcast phone numbers across dozens of unsolicited WhatsApp groups, resulting in harassment—particularly for female students and families. Flatora enforces bilateral privacy: your contact is visible <em>only</em> to the specific verified landlord whose property you request, and only after they formally accept.
+          </p>
+          <div class="status-flow-stepper" style="padding: 0.5rem 0;">
+            <div class="flow-line"></div>
+            <div class="flow-step completed"><div class="flow-step-circle">1</div><span class="flow-step-label">Available</span></div>
+            <div class="flow-step completed"><div class="flow-step-circle">2</div><span class="flow-step-label">Pending</span></div>
+            <div class="flow-step active"><div class="flow-step-circle">3</div><span class="flow-step-label">Approved (Contact Shared)</span></div>
+            <div class="flow-step"><div class="flow-step-circle">4</div><span class="flow-step-label">Rented (Physical Deal)</span></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container-wide">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-text">
+            <span class="brand-name">Flatora<span>.</span></span>
+            <span class="brand-tagline">Naya shehar, apna thikana.</span>
+          </div>
+          <p class="footer-desc">
+            Karachi's dedicated zero-commission housing discovery portal for newcomers, university students and working individuals.
+          </p>
+          <div class="footer-city-pill">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Karachi, Pakistan (PKR) Only
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home Portal</a></li>
+            <li><a href="listings.html" class="footer-link">Browse Properties</a></li>
+            <li><a href="search-results.html" class="footer-link">Search Results</a></li>
+            <li><a href="my-requests.html" class="footer-link">Tenant Requests</a></li>
+            <li><a href="contact.html" class="footer-link">About & Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">User Roles</h4>
+          <ul class="footer-links">
+            <li><a href="login.html" class="footer-link">Tenant Sign In</a></li>
+            <li><a href="broker-dashboard.html" class="footer-link">Broker Dashboard</a></li>
+            <li><a href="add-property.html" class="footer-link">Add New Listing</a></li>
+            <li><a href="admin-dashboard.html" class="footer-link">Admin Oversight</a></li>
+            <li><a href="login.html" class="footer-link">Register Agency</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Project Standards</h4>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.5; margin-bottom: 0.75rem;">
+            Semester Academic Project developed strictly in compliance with course criteria:
+          </p>
+          <div class="footer-disclaimer">
+            <strong>Pure HTML5 & CSS3:</strong> Zero JavaScript, Zero frameworks, Zero external backend. Double-click offline browser ready.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Flatora Karachi. Designed with deep teal, warm amber and cream.
+        </div>
+        <div>
+          <span>Karachi Localities: Gulshan &bull; Johar &bull; Nazimabad &bull; PECHS &bull; DHA &bull; Clifton</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Central administration and quality oversight dashboard for Flatora Karachi rental portal. Control broker verifications and listing integrity.">
+  <title>Admin Dashboard - Flatora Karachi</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL HEADER & NAVBAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container-wide">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <a href="index.html" class="brand" aria-label="Flatora Homepage">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Flatora<span>.</span></span>
+            <span class="brand-tagline">Naya shehar, apna thikana</span>
+          </div>
+        </a>
+
+        <!-- Pure CSS Hamburger Checkbox Toggle -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
+        <label for="nav-toggle" class="nav-toggle-label" title="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </label>
+
+        <!-- Navbar Menu Links -->
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            Home
+          </a>
+          <a href="listings.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Properties
+          </a>
+          <a href="my-requests.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            My Requests
+          </a>
+          <a href="broker-dashboard.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            Broker Dashboard
+          </a>
+          <a href="admin-dashboard.html" class="nav-link active" aria-current="page">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Admin
+          </a>
+          <a href="contact.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            Contact
+          </a>
+
+          <div class="nav-actions">
+            <span class="badge" style="background: #FEF3C7; color: #92400E; font-weight: 800; font-size: 0.75rem;">
+              Super Admin Session
+            </span>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       ADMIN WORKSPACE LAYOUT: DEEP TEAL SIDEBAR + CONTENT AREA
+       ======================================================================== -->
+  <div class="dashboard-layout fade-in-up">
+    
+    <!-- LEFT DEEP TEAL SIDEBAR -->
+    <aside class="admin-sidebar">
+      
+      <div>
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; padding-left: 0.5rem;">
+          <div style="width: 40px; height: 40px; border-radius: var(--radius-sm); background: var(--primary-teal); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800;">
+            AD
+          </div>
+          <div>
+            <div style="font-weight: 800; font-size: 0.95rem; color: #FFFFFF;">Flatora Authority</div>
+            <span style="font-size: 0.7rem; color: #94A3B8;">Karachi Oversight Center</span>
+          </div>
+        </div>
+
+        <div class="sidebar-title">Management Modules</div>
+        <nav class="sidebar-nav">
+          <a href="#overview" class="sidebar-link active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Overview & Stats
+          </a>
+          <a href="#pending-brokers" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><polyline points="16 11 18 13 22 9"></polyline></svg>
+            Broker Approvals
+            <span class="badge badge-pending" style="margin-left: auto; font-size: 0.65rem;">5</span>
+          </a>
+          <a href="#listings-control" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            Listing Moderation
+          </a>
+          <a href="#users-access" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            User Access Control
+          </a>
+          <a href="#stuck-properties" class="sidebar-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+            Stuck Property Reset
+          </a>
+        </nav>
+      </div>
+
+      <div style="margin-top: auto; padding: 1rem; background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-sm); border-left: 3px solid var(--accent-amber);">
+        <div style="font-size: 0.75rem; font-weight: 700; color: #FFFFFF; margin-bottom: 0.25rem;">Academic Grading Demo:</div>
+        <p style="font-size: 0.725rem; color: #94A3B8; line-height: 1.4; margin-bottom: 0;">
+          Table 1 simulates approving newly registered brokers from <a href="login.html" style="color: var(--accent-amber); text-decoration: underline;">login.html</a>.
+        </p>
+      </div>
+
+    </aside>
+
+    <!-- RIGHT DASHBOARD MAIN CONTENT -->
+    <main class="dashboard-content">
+      
+      <!-- Top Title Bar -->
+      <div id="overview" style="margin-bottom: 2rem;">
+        <span class="section-eyebrow">Karachi Housing Authority</span>
+        <h1 style="font-size: 1.8rem; margin-bottom: 0.35rem;">Platform Administration Center</h1>
+        <p style="font-size: 0.9rem; color: var(--muted-text);">
+          Supervise broker credentials, eliminate fraudulent listings, review anti-harassment safeguards, and reset deadlocked properties across Karachi.
+        </p>
+      </div>
+
+      <!-- 4 TOP STAT CARDS -->
+      <div class="grid grid-cols-4 gap-3" style="margin-bottom: 2.5rem;">
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-teal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <div>
+            <div class="stat-value">1,420</div>
+            <div class="stat-label">Total Platform Users</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-amber">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          </div>
+          <div>
+            <div class="stat-value">86</div>
+            <div class="stat-label">Verified Brokers</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon stat-icon-blue">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+          </div>
+          <div>
+            <div class="stat-value">248</div>
+            <div class="stat-label">Listed Properties</div>
+          </div>
+        </div>
+
+        <div class="stat-card" style="border-color: #FCD34D;">
+          <div class="stat-icon" style="background: #FEF3C7; color: #B45309;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <div>
+            <div class="stat-value" style="color: #B45309;">5</div>
+            <div class="stat-label">Pending Broker Approvals</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================================
+           TABLE 1: PENDING BROKER APPROVALS (PRIMARY DEMO STEP)
+           ================================================================== -->
+      <section id="pending-brokers" style="margin-bottom: 3rem;">
+        <div class="flex items-center justify-between" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <h2 style="font-size: 1.25rem;">Pending Broker Agency Approvals (5)</h2>
+            <p style="font-size: 0.85rem; color: var(--muted-text);">Brokers must submit verified 13-digit NADRA CNIC and registered office addresses before listing.</p>
+          </div>
+          <span class="badge badge-pending">Needs Admin Review</span>
+        </div>
+
+        <div class="table-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Agency / Business Name</th>
+                <th>Broker Full Name</th>
+                <th>Physical Karachi Office</th>
+                <th>13-Digit NADRA CNIC</th>
+                <th>Registered Date</th>
+                <th style="text-align: right;">Verification Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+              <!-- Broker 1 (Matches Step 1 of teacher demo flow) -->
+              <tr>
+                <td>
+                  <div style="font-weight: 700; color: var(--ink-heading);">Al-Madina Estates & Hostels</div>
+                  <span style="font-size: 0.725rem; color: var(--muted-text);">Application Ref: #BRK-4019</span>
+                </td>
+                <td style="font-weight: 600;">Asad Qureshi</td>
+                <td>Shop 12, Block 13-D Gulshan-e-Iqbal, Karachi</td>
+                <td><code style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--surface-alt); padding: 2px 6px; border-radius: 4px;">42101-7654321-3</code></td>
+                <td class="table-nowrap">Today, 02:15 AM</td>
+                <td style="text-align: right;" class="table-nowrap">
+                  <!-- TEACHER DEMO FLOW STEP 1: APPROVE BROKER -->
+                  <a href="broker-dashboard.html" class="btn btn-primary btn-sm" title="Approve broker and grant listing permissions">
+                    &check; Approve Broker
+                  </a>
+                  <a href="#" class="btn btn-danger-outline btn-sm" style="margin-left: 4px;">Reject</a>
+                </td>
+              </tr>
+
+              <!-- Broker 2 -->
+              <tr>
+                <td>
+                  <div style="font-weight: 700; color: var(--ink-heading);">Coastal Horizon Properties</div>
+                  <span style="font-size: 0.725rem; color: var(--muted-text);">Application Ref: #BRK-4015</span>
+                </td>
+                <td style="font-weight: 600;">Rashid Hussain</td>
+                <td>Plot 4-C, Khayaban-e-Ittehad, Phase 6 DHA, Karachi</td>
+                <td><code style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--surface-alt); padding: 2px 6px; border-radius: 4px;">42201-1234567-5</code></td>
+                <td class="table-nowrap">Yesterday</td>
+                <td style="text-align: right;" class="table-nowrap">
+                  <a href="#" class="btn btn-primary btn-sm">&check; Approve Broker</a>
+                  <a href="#" class="btn btn-danger-outline btn-sm" style="margin-left: 4px;">Reject</a>
+                </td>
+              </tr>
+
+              <!-- Broker 3 -->
+              <tr>
+                <td>
+                  <div style="font-weight: 700; color: var(--ink-heading);">Johar Student Haven</div>
+                  <span style="font-size: 0.725rem; color: var(--muted-text);">Application Ref: #BRK-3998</span>
+                </td>
+                <td style="font-weight: 600;">Farhan Mallick</td>
+                <td>Building 19, Block 12, Gulistan-e-Johar, Karachi</td>
+                <td><code style="font-family: var(--font-mono); font-size: 0.85rem; background: var(--surface-alt); padding: 2px 6px; border-radius: 4px;">42101-9876543-1</code></td>
+                <td class="table-nowrap">Oct 18, 2026</td>
+                <td style="text-align: right;" class="table-nowrap">
+                  <a href="#" class="btn btn-primary btn-sm">&check; Approve Broker</a>
+                  <a href="#" class="btn btn-danger-outline btn-sm" style="margin-left: 4px;">Reject</a>
+                </td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           TABLE 2: LISTING MODERATION & DELETION
+           ================================================================== -->
+      <section id="listings-control" style="margin-bottom: 3rem;">
+        <div class="flex items-center justify-between" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <h2 style="font-size: 1.25rem;">Listing Moderation & Content Quality</h2>
+            <p style="font-size: 0.85rem; color: var(--muted-text);">Audit public flats and hostels. Delete non-compliant listings.</p>
+          </div>
+          <span class="badge badge-approved">248 Active Listings</span>
+        </div>
+
+        <div class="table-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Property Title</th>
+                <th>Category</th>
+                <th>Broker / Landlord</th>
+                <th>Listed Rent</th>
+                <th>Status</th>
+                <th style="text-align: right;">Moderator Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <a href="property-details.html" style="font-weight: 700;">Modern 2-Bed Flat, Block 13-D Gulshan</a>
+                  <div style="font-size: 0.725rem; color: var(--muted-text);">ID: #FLT-4209 &bull; Disco Bakery</div>
+                </td>
+                <td><span class="badge badge-flat">Flat</span></td>
+                <td>Tariq Mahmood (Al-Raziq)</td>
+                <td>PKR 38,000 / mo</td>
+                <td><span class="badge badge-available">Available</span></td>
+                <td style="text-align: right;" class="table-nowrap">
+                  <a href="property-details.html" class="btn btn-outline btn-sm">Inspect</a>
+                  <!-- Action: Delete Listing -->
+                  <a href="#" class="btn btn-danger-outline btn-sm" style="margin-left: 4px;" title="Delete this listing from public search">Delete Listing</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <a href="property-details.html" style="font-weight: 700;">Safe Haven Girls Residency</a>
+                  <div style="font-size: 0.725rem; color: var(--muted-text);">ID: #HST-9021 &bull; PECHS Block 2</div>
+                </td>
+                <td><span class="badge badge-girls">Girls Hostel</span></td>
+                <td>Mrs. Samina Farooq</td>
+                <td>PKR 18,500 / bed</td>
+                <td><span class="badge badge-approved">Visit Active</span></td>
+                <td style="text-align: right;" class="table-nowrap">
+                  <a href="property-details.html" class="btn btn-outline btn-sm">Inspect</a>
+                  <a href="#" class="btn btn-danger-outline btn-sm" style="margin-left: 4px;">Delete Listing</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <a href="property-details.html" style="font-weight: 700;">Suspicious Unverified Penthouse</a>
+                  <div style="font-size: 0.725rem; color: #DC2626; font-weight: 600;">Reported: Incorrect Water Claims</div>
+                </td>
+                <td><span class="badge badge-apartment">Apartment</span></td>
+                <td>Unverified User #902</td>
+                <td>PKR 12,000 / mo</td>
+                <td><span class="badge badge-rejected">Flagged</span></td>
+                <td style="text-align: right;" class="table-nowrap">
+                  <a href="#" class="btn btn-danger btn-sm">Take Down & Delete</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           TABLE 3: USERS & BROKERS ACCESS CONTROL (BLOCK / UNBLOCK)
+           ================================================================== -->
+      <section id="users-access" style="margin-bottom: 3rem;">
+        <div class="flex items-center justify-between" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <h2 style="font-size: 1.25rem;">Users & Brokers Access Control</h2>
+            <p style="font-size: 0.85rem; color: var(--muted-text);">Suspend violators who abuse contact details or engage in tenant harassment.</p>
+          </div>
+          <span class="badge badge-pill" style="background: var(--surface-alt); color: var(--ink-heading);">Safety Governance</span>
+        </div>
+
+        <div class="table-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Account Holder</th>
+                <th>Role</th>
+                <th>Email & Phone</th>
+                <th>Registered City</th>
+                <th>Standing</th>
+                <th style="text-align: right;">Enforcement</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div style="font-weight: 700; color: var(--ink-heading);">Bilal Ahmed</div>
+                  <span style="font-size: 0.725rem; color: var(--muted-text);">Account ID: #USR-1082</span>
+                </td>
+                <td><span class="badge" style="background: #E0E7FF; color: #3730A3;">Tenant</span></td>
+                <td>bilal.ahmed@gmail.com &bull; +92 300 1234567</td>
+                <td>Karachi (Relocating)</td>
+                <td><span class="badge badge-available">Active / Verified</span></td>
+                <td style="text-align: right;" class="table-nowrap">
+                  <!-- Action: Block User -->
+                  <a href="#" class="btn btn-danger-outline btn-sm" title="Suspend user account">Block User</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div style="font-weight: 700; color: var(--ink-heading);">Tariq Mahmood</div>
+                  <span style="font-size: 0.725rem; color: var(--muted-text);">Agency: Al-Raziq Real Estate</span>
+                </td>
+                <td><span class="badge" style="background: var(--teal-soft); color: var(--primary-teal);">Broker</span></td>
+                <td>tariq@alraziq.pk &bull; +92 300 8889999</td>
+                <td>Karachi East</td>
+                <td><span class="badge badge-available">Active / Verified</span></td>
+                <td style="text-align: right;" class="table-nowrap">
+                  <a href="#" class="btn btn-danger-outline btn-sm">Block User</a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div style="font-weight: 700; color: var(--ink-heading);">Ghulam Rasool</div>
+                  <span style="font-size: 0.725rem; color: #DC2626;">Banned for unauthorized commissions</span>
+                </td>
+                <td><span class="badge badge-rejected">Suspended</span></td>
+                <td>rasool_estates@yahoo.com</td>
+                <td>Karachi Central</td>
+                <td><span class="badge badge-rejected">Suspended</span></td>
+                <td style="text-align: right;" class="table-nowrap">
+                  <!-- Action: Unblock User -->
+                  <a href="#" class="btn btn-secondary btn-sm" title="Restore account access">Unblock User</a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ==================================================================
+           TABLE 4: STUCK PROPERTIES OVERSIGHT (ANTI-HOARDING SAFEGUARD)
+           ================================================================== -->
+      <section id="stuck-properties">
+        <div class="flex items-center justify-between" style="margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+          <div>
+            <h2 style="font-size: 1.25rem;">Stuck Properties Oversight (Anti-Hoarding Safeguard)</h2>
+            <p style="font-size: 0.85rem; color: var(--muted-text);">
+              If a listing is locked in "Request Pending" for &gt;48 hrs or an inspection visit was cancelled without the broker updating the status, Admin resets it to "Available".
+            </p>
+          </div>
+          <span class="badge badge-pending">Fair Market Watch</span>
+        </div>
+
+        <div class="table-container">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Property Title</th>
+                <th>Responsible Broker</th>
+                <th>Deadlocked Status</th>
+                <th>Inactive Duration</th>
+                <th>Hold Reason</th>
+                <th style="text-align: right;">Oversight Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <div style="font-weight: 700; color: var(--ink-heading);">2-Bed Flat, Federal B Area Block 14</div>
+                  <span style="font-size: 0.725rem; color: var(--muted-text);">PKR 30,000 / mo</span>
+                </td>
+                <td>Kamran Ali (Dastagir Properties)</td>
+                <td><span class="badge badge-pending">Request Pending</span></td>
+                <td style="color: #DC2626; font-weight: 700;">64 Hours (Overdue)</td>
+                <td>Tenant did not proceed with visit; broker idle</td>
+                <td style="text-align: right;" class="table-nowrap">
+                  <!-- Action: Reset to Available -->
+                  <a href="listings.html" class="btn btn-primary btn-sm" title="Reset property status back to Available">
+                    Reset Status to Available
+                  </a>
+                </td>
+              </tr>
+
+              <tr>
+                <td>
+                  <div style="font-weight: 700; color: var(--ink-heading);">Al-Haram Executive Girls Hostel</div>
+                  <span style="font-size: 0.725rem; color: var(--muted-text);">PKR 17,500 / bed</span>
+                </td>
+                <td>Nargis Zafar</td>
+                <td><span class="badge badge-full">Full (Marked 0 Beds)</span></td>
+                <td>12 Days</td>
+                <td>Vacant bed cleared on Oct 18 but status not refreshed</td>
+                <td style="text-align: right;" class="table-nowrap">
+                  <a href="listings.html" class="btn btn-primary btn-sm">
+                    Re-open 1 Bed Available
+                  </a>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- ========================================================================
+       GLOBAL SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container-wide">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-text">
+            <span class="brand-name">Flatora<span>.</span></span>
+            <span class="brand-tagline">Naya shehar, apna thikana.</span>
+          </div>
+          <p class="footer-desc">
+            Karachi's dedicated zero-commission housing discovery portal for newcomers, university students and working individuals.
+          </p>
+          <div class="footer-city-pill">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Karachi, Pakistan (PKR) Only
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home Portal</a></li>
+            <li><a href="listings.html" class="footer-link">Browse Properties</a></li>
+            <li><a href="search-results.html" class="footer-link">Search Results</a></li>
+            <li><a href="my-requests.html" class="footer-link">Tenant Requests</a></li>
+            <li><a href="contact.html" class="footer-link">About & Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">User Roles</h4>
+          <ul class="footer-links">
+            <li><a href="login.html" class="footer-link">Tenant Sign In</a></li>
+            <li><a href="broker-dashboard.html" class="footer-link">Broker Dashboard</a></li>
+            <li><a href="add-property.html" class="footer-link">Add New Listing</a></li>
+            <li><a href="admin-dashboard.html" class="footer-link">Admin Oversight</a></li>
+            <li><a href="login.html" class="footer-link">Register Agency</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Project Standards</h4>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.5; margin-bottom: 0.75rem;">
+            Semester Academic Project developed strictly in compliance with course criteria:
+          </p>
+          <div class="footer-disclaimer">
+            <strong>Pure HTML5 & CSS3:</strong> Zero JavaScript, Zero frameworks, Zero external backend. Double-click offline browser ready.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Flatora Karachi. Designed with deep teal, warm amber and cream.
+        </div>
+        <div>
+          <span>Karachi Localities: Gulshan &bull; Johar &bull; Nazimabad &bull; PECHS &bull; DHA &bull; Clifton</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

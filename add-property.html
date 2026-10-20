@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="List a new flat, apartment or hostel in Karachi on Flatora. Complete cost transparency and verified tenant requests.">
+  <title>Add / Edit Property - Flatora Broker Portal</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL HEADER & NAVBAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container-wide">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <a href="index.html" class="brand" aria-label="Flatora Homepage">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Flatora<span>.</span></span>
+            <span class="brand-tagline">Naya shehar, apna thikana</span>
+          </div>
+        </a>
+
+        <!-- Pure CSS Hamburger Checkbox Toggle -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
+        <label for="nav-toggle" class="nav-toggle-label" title="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </label>
+
+        <!-- Navbar Menu Links -->
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            Home
+          </a>
+          <a href="listings.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Properties
+          </a>
+          <a href="my-requests.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            My Requests
+          </a>
+          <a href="broker-dashboard.html" class="nav-link active" aria-current="page">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            Broker Dashboard
+          </a>
+          <a href="admin-dashboard.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Admin
+          </a>
+          <a href="contact.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            Contact
+          </a>
+
+          <div class="nav-actions">
+            <a href="broker-dashboard.html" class="btn btn-outline btn-sm">
+              &larr; Back to Dashboard
+            </a>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT: ADD / EDIT PROPERTY FORM
+       ======================================================================== -->
+  <main class="page-wrapper fade-in-up">
+    
+    <section class="section-tint" style="padding: 1.5rem 0;">
+      <div class="container-narrow">
+        <h1 style="font-size: 1.6rem; margin-bottom: 0.2rem;">Post a New Property / Hostel</h1>
+        <p style="font-size: 0.85rem; color: var(--muted-text);">
+          Flatora enforces 100% cost and utility transparency. Complete all sections below.
+        </p>
+      </div>
+    </section>
+
+    <div class="section">
+      <div class="container-narrow">
+        
+        <!-- Form redirects to broker-dashboard.html on submit to demonstrate workflow -->
+        <form action="broker-dashboard.html" method="get">
+          
+          <!-- ==============================================================
+               SECTION 1: BASIC LISTING INFORMATION & CATEGORY
+               ============================================================== -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1.2rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.65rem;">
+              <span class="step-num-badge" style="width: 28px; height: 28px; font-size: 0.85rem; margin-bottom: 0;">1</span>
+              Basic Property Information
+            </h2>
+
+            <div class="form-group">
+              <label for="prop-title" class="form-label">Listing Headline / Title <span class="required">*</span></label>
+              <input type="text" id="prop-title" name="title" class="form-control" placeholder="e.g. Modern 2-Bed Family Flat, Block 13-D Gulshan-e-Iqbal" required>
+              <span class="form-hint">Mention bedrooms, locality, and major landmark for faster tenant interest.</span>
+            </div>
+
+            <!-- PURE CSS CATEGORY RADIO GROUP (Controlling Hostel Conditional Reveal) -->
+            <div class="form-group">
+              <span class="form-label">Property Category <span class="required">*</span></span>
+              
+              <!-- Hidden Radios placed at sibling level for CSS :checked selector -->
+              <input type="radio" name="property_type" id="type-flat" value="flat" class="tab-radio-input" checked>
+              <input type="radio" name="property_type" id="type-apartment" value="apartment" class="tab-radio-input">
+              <input type="radio" name="property_type" id="type-boys" value="boys-hostel" class="tab-radio-input">
+              <input type="radio" name="property_type" id="type-girls" value="girls-hostel" class="tab-radio-input">
+
+              <div class="type-radio-cards">
+                <label for="type-flat" class="type-card-label">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 4px;" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+                  <span style="font-size: 0.85rem; font-weight: 700;">Family Flat</span>
+                </label>
+                
+                <label for="type-apartment" class="type-card-label">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 4px;" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                  <span style="font-size: 0.85rem; font-weight: 700;">Apartment</span>
+                </label>
+
+                <label for="type-boys" class="type-card-label">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 4px;" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg>
+                  <span style="font-size: 0.85rem; font-weight: 700;">Boys Hostel</span>
+                </label>
+
+                <label for="type-girls" class="type-card-label">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 4px;" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                  <span style="font-size: 0.85rem; font-weight: 700;">Girls Hostel</span>
+                </label>
+              </div>
+              <span class="form-hint" style="color: var(--primary-teal); font-weight: 600;">
+                Selecting Boys Hostel or Girls Hostel will automatically reveal required bed capacity & safety fields below.
+              </span>
+            </div>
+
+            <!-- Area Datalist Input -->
+            <div class="grid grid-cols-2 gap-3" style="margin-bottom: 1.25rem;">
+              <div>
+                <label for="prop-area" class="form-label">Karachi Area / Sector <span class="required">*</span></label>
+                <input type="text" id="prop-area" name="area" class="form-control" list="karachi-areas" placeholder="e.g. Gulshan-e-Iqbal, Johar..." required>
+                <datalist id="karachi-areas">
+                  <option value="Gulshan-e-Iqbal">
+                  <option value="Gulistan-e-Johar">
+                  <option value="North Nazimabad">
+                  <option value="Nazimabad">
+                  <option value="Clifton">
+                  <option value="DHA">
+                  <option value="Saddar">
+                  <option value="PECHS">
+                  <option value="Bahadurabad">
+                  <option value="FB Area">
+                  <option value="Korangi">
+                  <option value="Malir">
+                </datalist>
+              </div>
+
+              <div>
+                <label for="prop-size" class="form-label">Area Size (Sq Ft or Beds)</label>
+                <input type="text" id="prop-size" name="size" class="form-control" placeholder="e.g. 1,150 Sq Ft or 12 Beds">
+              </div>
+            </div>
+
+            <!-- Plain Text Address -->
+            <div class="form-group">
+              <label for="prop-address" class="form-label">Complete Physical Street Address <span class="required">*</span></label>
+              <input type="text" id="prop-address" name="address" class="form-control" placeholder="e.g. Flat B-4, 2nd Floor, Al-Madina Heights, Block 13-D Gulshan" required>
+              <div class="alert alert-info" style="margin-top: 0.5rem; margin-bottom: 0; padding: 0.6rem 0.85rem; font-size: 0.775rem;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+                <span><strong>Female & Student Safety Policy:</strong> For Girls Hostels, exact building numbers are permanently masked on public search pages and disclosed exclusively to verified tenant requests after broker approval.</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-2 gap-3">
+              <div>
+                <label for="prop-floor" class="form-label">Floor Number</label>
+                <select id="prop-floor" name="floor" class="form-select">
+                  <option value="ground">Ground Floor</option>
+                  <option value="1">1st Floor</option>
+                  <option value="2" selected>2nd Floor</option>
+                  <option value="3">3rd Floor</option>
+                  <option value="4">4th Floor or Above</option>
+                </select>
+              </div>
+              <div>
+                <label for="prop-bedrooms" class="form-label">Total Bedrooms (If Flat/Apt)</label>
+                <select id="prop-bedrooms" name="bedrooms" class="form-select">
+                  <option value="1">1 Bedroom / Studio</option>
+                  <option value="2" selected>2 Bedrooms</option>
+                  <option value="3">3 Bedrooms</option>
+                  <option value="4">4+ Bedrooms</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- ==============================================================
+                 PURE CSS CONDITIONAL HOSTEL FIELDS (REVEALED VIA :CHECKED)
+                 ============================================================== -->
+            <div class="hostel-only-fields">
+              <div style="display: flex; align-items: center; gap: 0.5rem; color: #92400E; font-weight: 700; margin-bottom: 1rem;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                <span>Hostel Capacity & Safety Configuration (Mandatory for Hostels)</span>
+              </div>
+
+              <div class="grid grid-cols-3 gap-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label for="hostel-rent-bed" class="form-label">Monthly Rent per Bed (PKR) <span class="required">*</span></label>
+                  <input type="number" id="hostel-rent-bed" name="rent_per_bed" class="form-control" placeholder="e.g. 15,000" min="5000">
+                </div>
+                <div>
+                  <label for="hostel-total-beds" class="form-label">Total Beds in Property <span class="required">*</span></label>
+                  <input type="number" id="hostel-total-beds" name="total_beds" class="form-control" placeholder="e.g. 24" min="1">
+                </div>
+                <div>
+                  <label for="hostel-vacant-beds" class="form-label">Currently Vacant Beds <span class="required">*</span></label>
+                  <input type="number" id="hostel-vacant-beds" name="vacant_beds" class="form-control" placeholder="e.g. 4" min="0">
+                  <span class="form-hint">Setting 0 shows a "Full" badge.</span>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3" style="margin-bottom: 1rem;">
+                <div>
+                  <label for="hostel-room-type" class="form-label">Room Type Configuration</label>
+                  <select id="hostel-room-type" name="room_type" class="form-select">
+                    <option value="single">Single Private Cubicle</option>
+                    <option value="2-share" selected>2-Sharing Room</option>
+                    <option value="3-share">3-Sharing Room</option>
+                    <option value="4-dorm">4-Sharing Dormitory Hall</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="hostel-meals" class="form-label">Meal & Mess Inclusions</label>
+                  <select id="hostel-meals" name="meals" class="form-select">
+                    <option value="3-meals" selected>3 Times Daily Meals (Breakfast, Lunch, Dinner)</option>
+                    <option value="2-meals">2 Times Daily (Breakfast + Dinner)</option>
+                    <option value="none">No Food (Shared Kitchen Facility)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Hostel Security Checklist -->
+              <div>
+                <span class="form-label">Supervision & Security Measures</span>
+                <div class="grid grid-cols-2 gap-2">
+                  <label class="form-check">
+                    <input type="checkbox" name="cctv" class="form-check-input" checked>
+                    <span class="form-check-label">24/7 CCTV in Corridors & Entry</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="guard" class="form-check-input" checked>
+                    <span class="form-check-label">Dedicated Uniformed Guard</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="warden" class="form-check-input" checked>
+                    <span class="form-check-label">Resident Female/Male Warden on Premises</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="curfew" class="form-check-input" checked>
+                    <span class="form-check-label">Night Gate Curfew (10:00 PM)</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ==============================================================
+               SECTION 2: COSTS & EXPENSES TRANSPARENCY
+               ============================================================== -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1.2rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.65rem;">
+              <span class="step-num-badge" style="width: 28px; height: 28px; font-size: 0.85rem; margin-bottom: 0;">2</span>
+              All-Inclusive Costs & Utility Breakdown
+            </h2>
+
+            <div class="grid grid-cols-2 gap-3" style="margin-bottom: 1.25rem;">
+              <div>
+                <label for="prop-rent" class="form-label">Base Monthly Rent (PKR) <span class="required">*</span></label>
+                <input type="number" id="prop-rent" name="rent" class="form-control" placeholder="e.g. 38,000" min="2000" required>
+              </div>
+              <div>
+                <label for="prop-advance" class="form-label">Advance / Security Deposit (PKR) <span class="required">*</span></label>
+                <input type="number" id="prop-advance" name="advance" class="form-control" placeholder="e.g. 76,000 (usually 2 months)" min="0" required>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-3 gap-3" style="margin-bottom: 1.25rem;">
+              <div>
+                <label for="prop-maintenance" class="form-label">Monthly Maintenance (PKR)</label>
+                <input type="number" id="prop-maintenance" name="maintenance" class="form-control" placeholder="e.g. 3,000" min="0">
+                <span class="form-hint">Lift, guard, common cleaner</span>
+              </div>
+              <div>
+                <label for="prop-gas" class="form-label">Sui Gas (PKR / Status)</label>
+                <input type="text" id="prop-gas" name="gas_cost" class="form-control" placeholder="e.g. Included or Fixed PKR 800">
+              </div>
+              <div>
+                <label for="prop-water-status" class="form-label">Water Source & Cost</label>
+                <select id="prop-water-status" name="water_status" class="form-select">
+                  <option value="line-sweet">Line Sweet Water (Free / Included)</option>
+                  <option value="boring">Boring Pump on Premises</option>
+                  <option value="tanker">Private Tanker Sharing (Avg PKR 2k)</option>
+                </select>
+              </div>
+            </div>
+
+            <div>
+              <label for="prop-loadshedding" class="form-label">Actual K-Electric Load-Shedding Hours</label>
+              <select id="prop-loadshedding" name="loadshedding" class="form-select">
+                <option value="0">Zero Hours (Exempted Industrial / Medical Grid)</option>
+                <option value="generator">Standby Generator Provided by Building</option>
+                <option value="1-2">1 to 2 Hours Daily (Morning / Afternoon)</option>
+                <option value="3-4">3 to 4 Hours Daily</option>
+              </select>
+              <span class="form-hint">Be strictly honest. Misleading power claims result in broker rating penalties.</span>
+            </div>
+
+          </div>
+
+          <!-- ==============================================================
+               SECTION 3: FACILITIES & TENANT RULES
+               ============================================================== -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1.2rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.65rem;">
+              <span class="step-num-badge" style="width: 28px; height: 28px; font-size: 0.85rem; margin-bottom: 0;">3</span>
+              Facilities, Amenities & Building Rules
+            </h2>
+
+            <div style="margin-bottom: 1.25rem;">
+              <span class="form-label">Building Facilities Included:</span>
+              <div class="grid grid-cols-3 gap-2">
+                <label class="form-check">
+                  <input type="checkbox" name="lift" class="form-check-input" checked>
+                  <span class="form-check-label">Working Elevator / Lift</span>
+                </label>
+                <label class="form-check">
+                  <input type="checkbox" name="generator" class="form-check-input" checked>
+                  <span class="form-check-label">Standby Generator</span>
+                </label>
+                <label class="form-check">
+                  <input type="checkbox" name="guard" class="form-check-input" checked>
+                  <span class="form-check-label">24/7 Security Guard</span>
+                </label>
+                <label class="form-check">
+                  <input type="checkbox" name="parking" class="form-check-input" checked>
+                  <span class="form-check-label">Reserved Car Parking</span>
+                </label>
+                <label class="form-check">
+                  <input type="checkbox" name="internet" class="form-check-input" checked>
+                  <span class="form-check-label">Fiber Optic Internet</span>
+                </label>
+                <label class="form-check">
+                  <input type="checkbox" name="balcony" class="form-check-input" checked>
+                  <span class="form-check-label">Balcony / Open View</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="prop-rules" class="form-label">House Rules & Restrictions</label>
+              <textarea id="prop-rules" name="rules" class="form-control" placeholder="e.g. Suitable for small family. No late-night loud music. Main building gate closes at 12:00 AM midnight."></textarea>
+            </div>
+
+          </div>
+
+          <!-- ==============================================================
+               SECTION 4: PHOTO UPLOAD UI (MINIMUM 3 PHOTOS REQUIRED)
+               ============================================================== -->
+          <div class="card" style="margin-bottom: 2rem;">
+            <h2 style="font-size: 1.2rem; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid var(--border-light); padding-bottom: 0.65rem;">
+              <span class="step-num-badge" style="width: 28px; height: 28px; font-size: 0.85rem; margin-bottom: 0;">4</span>
+              Property Photos (Minimum 3 Required)
+            </h2>
+
+            <div style="border: 2px dashed var(--primary-teal); border-radius: var(--radius-lg); background-color: var(--teal-tint); padding: 2.5rem 1.5rem; text-align: center; margin-bottom: 1rem;">
+              <div style="width: 54px; height: 54px; border-radius: var(--radius-pill); background: var(--teal-soft); color: var(--primary-teal); display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem auto;">
+                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              </div>
+              <h3 style="font-size: 1.05rem; margin-bottom: 0.35rem;">Select Property Image Files</h3>
+              <p style="font-size: 0.825rem; color: var(--muted-text); max-width: 440px; margin: 0 auto 1rem auto;">
+                Upload real photos of the living room, master bedroom, kitchen, and bathroom. Transparent photos receive 4x more verified tenant applications.
+              </p>
+              
+              <!-- Real HTML5 file input with multiple -->
+              <input type="file" id="prop-photos" name="photos" class="form-control" style="max-width: 320px; margin: 0 auto;" accept="image/*" multiple required>
+              <div style="font-size: 0.75rem; color: var(--primary-teal); font-weight: 700; margin-top: 0.5rem;">
+                &check; Academic Prototype: Minimum 3 photo validation simulated
+              </div>
+            </div>
+
+          </div>
+
+          <!-- SUBMIT ACTION -->
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 2rem;">
+            <a href="broker-dashboard.html" class="btn btn-ghost">Cancel & Discard</a>
+            <button type="submit" class="btn btn-primary btn-lg" style="min-width: 240px;">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Publish Verified Listing
+            </button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container-wide">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-text">
+            <span class="brand-name">Flatora<span>.</span></span>
+            <span class="brand-tagline">Naya shehar, apna thikana.</span>
+          </div>
+          <p class="footer-desc">
+            Karachi's dedicated zero-commission housing discovery portal for newcomers, university students and working individuals.
+          </p>
+          <div class="footer-city-pill">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Karachi, Pakistan (PKR) Only
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home Portal</a></li>
+            <li><a href="listings.html" class="footer-link">Browse Properties</a></li>
+            <li><a href="search-results.html" class="footer-link">Search Results</a></li>
+            <li><a href="my-requests.html" class="footer-link">Tenant Requests</a></li>
+            <li><a href="contact.html" class="footer-link">About & Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">User Roles</h4>
+          <ul class="footer-links">
+            <li><a href="login.html" class="footer-link">Tenant Sign In</a></li>
+            <li><a href="broker-dashboard.html" class="footer-link">Broker Dashboard</a></li>
+            <li><a href="add-property.html" class="footer-link">Add New Listing</a></li>
+            <li><a href="admin-dashboard.html" class="footer-link">Admin Oversight</a></li>
+            <li><a href="login.html" class="footer-link">Register Agency</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Project Standards</h4>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.5; margin-bottom: 0.75rem;">
+            Semester Academic Project developed strictly in compliance with course criteria:
+          </p>
+          <div class="footer-disclaimer">
+            <strong>Pure HTML5 & CSS3:</strong> Zero JavaScript, Zero frameworks, Zero external backend. Double-click offline browser ready.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Flatora Karachi. Designed with deep teal, warm amber and cream.
+        </div>
+        <div>
+          <span>Karachi Localities: Gulshan &bull; Johar &bull; Nazimabad &bull; PECHS &bull; DHA &bull; Clifton</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>

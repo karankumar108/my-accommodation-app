@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Browse verified flats, apartments, boys and girls hostels in Karachi with transparent costs and load-shedding schedules on Flatora.">
+  <title>Karachi Property Listings - Flatora</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========================================================================
+       GLOBAL HEADER & NAVBAR
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container-wide">
+      <nav class="navbar" aria-label="Main Navigation">
+        
+        <a href="index.html" class="brand" aria-label="Flatora Homepage">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">Flatora<span>.</span></span>
+            <span class="brand-tagline">Naya shehar, apna thikana</span>
+          </div>
+        </a>
+
+        <!-- Pure CSS Hamburger Checkbox Toggle -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Toggle navigation menu">
+        <label for="nav-toggle" class="nav-toggle-label" title="Toggle navigation menu">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </label>
+
+        <!-- Navbar Menu Links -->
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path></svg>
+            Home
+          </a>
+          <a href="listings.html" class="nav-link active" aria-current="page">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+            </svg>
+            Properties
+          </a>
+          <a href="my-requests.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+            My Requests
+          </a>
+          <a href="broker-dashboard.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            Broker Dashboard
+          </a>
+          <a href="admin-dashboard.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+            Admin
+          </a>
+          <a href="contact.html" class="nav-link">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            Contact
+          </a>
+
+          <div class="nav-actions">
+            <a href="login.html" class="btn btn-primary btn-sm">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+              Log In
+            </a>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN CONTENT: FILTER SIDEBAR & PROPERTY LISTINGS
+       ======================================================================== -->
+  <main class="page-wrapper fade-in-up">
+    
+    <!-- Top Breadcrumb / Hero Strip -->
+    <section class="section-tint" style="padding: 1.5rem 0; border-bottom: 1px solid var(--border-color);">
+      <div class="container-wide">
+        <div class="flex items-center justify-between" style="flex-wrap: wrap; gap: 1rem;">
+          <div>
+            <h1 style="font-size: 1.5rem; margin-bottom: 0.2rem;">Karachi Property Directory</h1>
+            <p style="font-size: 0.85rem; color: var(--muted-text);">Find verified family flats, high-rise apartments, and student hostels with zero broker deception.</p>
+          </div>
+          <div style="font-size: 0.85rem; color: var(--body-text);">
+            Showing <strong style="color: var(--primary-teal);">10 Listings</strong> across Karachi
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section" style="padding-top: 2rem;">
+      <div class="container-wide">
+        
+        <!-- PURE CSS MOBILE FILTER TOGGLE (Check-box Hack) -->
+        <input type="checkbox" id="filter-toggle" class="filter-toggle-checkbox" aria-label="Toggle property filters">
+        <label for="filter-toggle" class="filter-toggle-btn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="4" y1="21" x2="4" y2="14"></line>
+            <line x1="4" y1="10" x2="4" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12" y2="3"></line>
+            <line x1="20" y1="21" x2="20" y2="16"></line>
+            <line x1="20" y1="12" x2="20" y2="3"></line>
+            <line x1="1" y1="14" x2="7" y2="14"></line>
+            <line x1="9" y1="8" x2="15" y2="8"></line>
+            <line x1="17" y1="16" x2="23" y2="16"></line>
+          </svg>
+          Filter Properties (Tap to Open / Close)
+        </label>
+
+        <!-- TWO COLUMN LAYOUT: SIDEBAR FILTERS + LISTINGS GRID -->
+        <div class="listings-layout">
+          
+          <!-- LEFT FILTER PANEL -->
+          <aside class="filter-panel-responsive">
+            <div class="filter-sidebar-card">
+              
+              <div class="flex items-center justify-between" style="margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color);">
+                <h2 style="font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem;">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                  Filter Search
+                </h2>
+                <a href="listings.html" style="font-size: 0.775rem; color: var(--muted-text); font-weight: 600;">Reset All</a>
+              </div>
+
+              <form action="search-results.html" method="get">
+                
+                <!-- Area with Datalist -->
+                <div class="form-group">
+                  <label for="filter-area" class="form-label">Karachi Area / Sector</label>
+                  <input type="text" id="filter-area" name="area" class="form-control" list="karachi-areas" placeholder="e.g. Gulshan, Johar, DHA...">
+                  <datalist id="karachi-areas">
+                    <option value="Gulshan-e-Iqbal">
+                    <option value="Gulistan-e-Johar">
+                    <option value="North Nazimabad">
+                    <option value="Nazimabad">
+                    <option value="Clifton">
+                    <option value="DHA">
+                    <option value="Saddar">
+                    <option value="PECHS">
+                    <option value="Bahadurabad">
+                    <option value="FB Area">
+                    <option value="Korangi">
+                    <option value="Malir">
+                  </datalist>
+                </div>
+
+                <!-- Category / Type -->
+                <div class="form-group">
+                  <label class="form-label">Category</label>
+                  <label class="form-check">
+                    <input type="checkbox" name="type" value="flat" class="form-check-input" checked>
+                    <span class="form-check-label">Family Flat / Portion</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="type" value="apartment" class="form-check-input" checked>
+                    <span class="form-check-label">Apartment / High-Rise</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="type" value="boys-hostel" class="form-check-input" checked>
+                    <span class="form-check-label">Boys Hostel (Per Bed)</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="type" value="girls-hostel" class="form-check-input" checked>
+                    <span class="form-check-label">Girls Hostel (Secure)</span>
+                  </label>
+                </div>
+
+                <!-- Budget Range -->
+                <div class="form-group">
+                  <label class="form-label">Monthly Rent Range (PKR)</label>
+                  <div class="grid grid-cols-2 gap-2">
+                    <input type="number" name="min_rent" class="form-control" placeholder="Min (10,000)" min="5000">
+                    <input type="number" name="max_rent" class="form-control" placeholder="Max (100,000)" max="500000">
+                  </div>
+                </div>
+
+                <!-- Bedrooms -->
+                <div class="form-group">
+                  <label for="filter-bedrooms" class="form-label">Bedrooms (Flats/Apts)</label>
+                  <select id="filter-bedrooms" name="bedrooms" class="form-select">
+                    <option value="">Any Bedrooms</option>
+                    <option value="1">1 Bed Studio</option>
+                    <option value="2">2 Bedrooms</option>
+                    <option value="3">3 Bedrooms</option>
+                    <option value="4">4+ Bedrooms</option>
+                  </select>
+                </div>
+
+                <!-- Load-Shedding Preference -->
+                <div class="form-group">
+                  <label for="filter-loadshedding" class="form-label">Load-Shedding Status</label>
+                  <select id="filter-loadshedding" name="loadshedding" class="form-select">
+                    <option value="">Any Power Schedule</option>
+                    <option value="exempted">Exempted / Zero Hours</option>
+                    <option value="generator">Standby Generator Included</option>
+                    <option value="max2">Under 2 Hours / Day</option>
+                  </select>
+                </div>
+
+                <!-- Amenities Checklist -->
+                <div class="form-group">
+                  <label class="form-label">Special Features</label>
+                  <label class="form-check">
+                    <input type="checkbox" name="gas" class="form-check-input">
+                    <span class="form-check-label">Sui Gas Available</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="water" class="form-check-input">
+                    <span class="form-check-label">24/7 Sweet Line Water</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="lift" class="form-check-input">
+                    <span class="form-check-label">Working Elevator / Lift</span>
+                  </label>
+                  <label class="form-check">
+                    <input type="checkbox" name="warden" class="form-check-input">
+                    <span class="form-check-label">Female Warden (Hostels)</span>
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block">
+                  Apply Filters
+                </button>
+
+              </form>
+
+            </div>
+          </aside>
+
+          <!-- RIGHT LISTINGS CONTENT -->
+          <section>
+            
+            <!-- Quick Chips Bar -->
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; flex-wrap: wrap; gap: 0.75rem;">
+              <div class="area-chips" style="margin-top: 0;">
+                <span class="area-chip" style="background: var(--teal-soft); color: var(--primary-teal); border-color: #99F6E4;">All Karachi Areas</span>
+                <span class="area-chip">Verified Only</span>
+                <span class="area-chip">PKR 13,000 - 85,000</span>
+              </div>
+              <div style="font-size: 0.85rem; color: var(--muted-text);">
+                Sort: <strong>Price (Low to High)</strong>
+              </div>
+            </div>
+
+            <!-- PROPERTY CARDS GRID (MIX OF FLATS, APARTMENTS, BOYS & GIRLS HOSTELS) -->
+            <div class="grid grid-cols-2 gap-4">
+              
+              <!-- Property 1: Gulshan Flat -->
+              <article class="property-card">
+                <div class="property-image-wrap">
+                  <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=700&auto=format&fit=crop&q=80" alt="2-Bed Furnished Flat in Gulshan-e-Iqbal Karachi" class="property-image">
+                  <div class="property-badges-overlay">
+                    <span class="badge badge-flat">Flat</span>
+                    <span class="badge badge-verified">Verified</span>
+                  </div>
+                  <div class="property-status-overlay">
+                    <span class="badge badge-available">Available</span>
+                  </div>
+                </div>
+                <div class="property-card-body">
+                  <div class="property-price-row">
+                    <div class="property-price">PKR 38,000 <span>/ mo</span></div>
+                    <div class="property-advance">Adv: PKR 76,000</div>
+                  </div>
+                  <h3 class="property-title"><a href="property-details.html">Modern 2-Bed Flat, Block 13-D Gulshan</a></h3>
+                  <div class="property-location">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Gulshan-e-Iqbal, Near Disco Bakery, Karachi
+                  </div>
+                  <div class="property-features">
+                    <div class="property-feature-item">2 Beds</div>
+                    <div class="property-feature-item">2 Baths</div>
+                    <div class="property-feature-item">Zero Load-shedding</div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-broker-meta">
+                      <div class="broker-avatar">TM</div>
+                      <div class="broker-info-text">
+                        <span class="broker-name">Tariq Mahmood</span>
+                        <span class="broker-agency">Al-Raziq Real Estate</span>
+                      </div>
+                    </div>
+                    <a href="property-details.html" class="btn btn-outline btn-sm">View Details</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Property 2: Girls Hostel (Safety info visible, address hidden) -->
+              <article class="property-card">
+                <div class="property-image-wrap">
+                  <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=700&auto=format&fit=crop&q=80" alt="Safe Haven Girls Hostel PECHS Block 2" class="property-image">
+                  <div class="property-badges-overlay">
+                    <span class="badge badge-girls">Girls Hostel</span>
+                    <span class="badge badge-verified">Female Warden</span>
+                  </div>
+                  <div class="property-status-overlay">
+                    <span class="badge badge-available">Available (3 Beds)</span>
+                  </div>
+                </div>
+                <div class="property-card-body">
+                  <div class="property-price-row">
+                    <div class="property-price">PKR 18,500 <span>/ bed / mo</span></div>
+                    <div class="property-advance">Adv: PKR 10,000</div>
+                  </div>
+                  <h3 class="property-title"><a href="property-details.html">Safe Haven Girls Residency (Shared Cubicle)</a></h3>
+                  <div class="property-location">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    PECHS Block 2 (Address protected for safety)
+                  </div>
+                  <div class="property-features">
+                    <div class="property-feature-item">2-Sharing</div>
+                    <div class="property-feature-item">3 Meals Inc.</div>
+                    <div class="property-feature-item">Biometric CCTV</div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-broker-meta">
+                      <div class="broker-avatar" style="background-color: var(--girls-hostel-soft); color: var(--girls-hostel);">SF</div>
+                      <div class="broker-info-text">
+                        <span class="broker-name">Mrs. Samina Farooq</span>
+                        <span class="broker-agency">Safe Haven Accommodations</span>
+                      </div>
+                    </div>
+                    <a href="property-details.html" class="btn btn-outline btn-sm">View Details</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Property 3: Boys Hostel near University -->
+              <article class="property-card">
+                <div class="property-image-wrap">
+                  <img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf?w=700&auto=format&fit=crop&q=80" alt="NED Scholar Boys Hostel Karachi" class="property-image">
+                  <div class="property-badges-overlay">
+                    <span class="badge badge-boys">Boys Hostel</span>
+                    <span class="badge badge-verified">Near NED / KU</span>
+                  </div>
+                  <div class="property-status-overlay">
+                    <span class="badge badge-available">Available (2 Beds)</span>
+                  </div>
+                </div>
+                <div class="property-card-body">
+                  <div class="property-price-row">
+                    <div class="property-price">PKR 14,500 <span>/ bed / mo</span></div>
+                    <div class="property-advance">Adv: PKR 5,000</div>
+                  </div>
+                  <h3 class="property-title"><a href="property-details.html">NED Scholar Boys Hostel (Fiber WiFi + UPS)</a></h3>
+                  <div class="property-location">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    University Road, Gulshan Block 1
+                  </div>
+                  <div class="property-features">
+                    <div class="property-feature-item">3-Sharing</div>
+                    <div class="property-feature-item">50 Mbps Net</div>
+                    <div class="property-feature-item">UPS Backup</div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-broker-meta">
+                      <div class="broker-avatar" style="background-color: var(--boys-hostel-soft); color: var(--boys-hostel);">AK</div>
+                      <div class="broker-info-text">
+                        <span class="broker-name">Asim Khan</span>
+                        <span class="broker-agency">NED Housing Network</span>
+                      </div>
+                    </div>
+                    <a href="property-details.html" class="btn btn-outline btn-sm">View Details</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Property 4: High-Rise Luxury Apartment in Clifton -->
+              <article class="property-card">
+                <div class="property-image-wrap">
+                  <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=700&auto=format&fit=crop&q=80" alt="3-Bed Luxury Apartment Clifton Karachi" class="property-image">
+                  <div class="property-badges-overlay">
+                    <span class="badge badge-apartment">Apartment</span>
+                    <span class="badge badge-verified">Gated High-Rise</span>
+                  </div>
+                  <div class="property-status-overlay">
+                    <span class="badge badge-available">Available</span>
+                  </div>
+                </div>
+                <div class="property-card-body">
+                  <div class="property-price-row">
+                    <div class="property-price">PKR 85,000 <span>/ mo</span></div>
+                    <div class="property-advance">Adv: PKR 170,000</div>
+                  </div>
+                  <h3 class="property-title"><a href="property-details.html">Sea-Breeze Executive 3-Bed Apartment, Clifton Block 5</a></h3>
+                  <div class="property-location">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Clifton Block 5, Near Boat Basin, Karachi
+                  </div>
+                  <div class="property-features">
+                    <div class="property-feature-item">3 Beds</div>
+                    <div class="property-feature-item">3 Baths</div>
+                    <div class="property-feature-item">Generator 24/7</div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-broker-meta">
+                      <div class="broker-avatar">RH</div>
+                      <div class="broker-info-text">
+                        <span class="broker-name">Rashid Hussain</span>
+                        <span class="broker-agency">Prime Coastal Realty</span>
+                      </div>
+                    </div>
+                    <a href="property-details.html" class="btn btn-outline btn-sm">View Details</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Property 5: Independent Portion in North Nazimabad -->
+              <article class="property-card">
+                <div class="property-image-wrap">
+                  <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=700&auto=format&fit=crop&q=80" alt="First Floor Portion North Nazimabad Karachi" class="property-image">
+                  <div class="property-badges-overlay">
+                    <span class="badge badge-flat">Portion</span>
+                    <span class="badge badge-verified">Separate Meter</span>
+                  </div>
+                  <div class="property-status-overlay">
+                    <span class="badge badge-available">Available</span>
+                  </div>
+                </div>
+                <div class="property-card-body">
+                  <div class="property-price-row">
+                    <div class="property-price">PKR 45,000 <span>/ mo</span></div>
+                    <div class="property-advance">Adv: PKR 90,000</div>
+                  </div>
+                  <h3 class="property-title"><a href="property-details.html">Peaceful 1st Floor Portion, Block H North Nazimabad</a></h3>
+                  <div class="property-location">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    North Nazimabad, Near Hyderi Market
+                  </div>
+                  <div class="property-features">
+                    <div class="property-feature-item">3 Beds</div>
+                    <div class="property-feature-item">2 Baths</div>
+                    <div class="property-feature-item">Line Water OK</div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-broker-meta">
+                      <div class="broker-avatar">FA</div>
+                      <div class="broker-info-text">
+                        <span class="broker-name">Fahad Ansari</span>
+                        <span class="broker-agency">Ansari Estate Advisors</span>
+                      </div>
+                    </div>
+                    <a href="property-details.html" class="btn btn-outline btn-sm">View Details</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Property 6: SHOWCASE BUSINESS RULE -> STATUS IS "REQUEST PENDING" (Disabled button) -->
+              <article class="property-card" style="border-color: #FDE68A;">
+                <div class="property-image-wrap">
+                  <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=700&auto=format&fit=crop&q=80" alt="Family Flat FB Area Karachi" class="property-image">
+                  <div class="property-badges-overlay">
+                    <span class="badge badge-flat">Flat</span>
+                  </div>
+                  <div class="property-status-overlay">
+                    <!-- Status Badge: Request Pending -->
+                    <span class="badge badge-pending">Request Pending</span>
+                  </div>
+                </div>
+                <div class="property-card-body">
+                  <div class="property-price-row">
+                    <div class="property-price">PKR 30,000 <span>/ mo</span></div>
+                    <div class="property-advance">Adv: PKR 60,000</div>
+                  </div>
+                  <h3 class="property-title"><a href="property-details.html">Well-Maintained 2-Bed Flat, FB Area Block 14</a></h3>
+                  <div class="property-location">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Federal B Area, Near Dastagir, Karachi
+                  </div>
+                  <div class="property-features">
+                    <div class="property-feature-item">2 Beds</div>
+                    <div class="property-feature-item">1 Bath</div>
+                    <div class="property-feature-item">Sui Gas In Order</div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-broker-meta">
+                      <div class="broker-avatar">KA</div>
+                      <div class="broker-info-text">
+                        <span class="broker-name">Kamran Ali</span>
+                        <span class="broker-agency">Dastagir Properties</span>
+                      </div>
+                    </div>
+                    <!-- DISABLED BUTTON DEMONSTRATING ONLY 1 ACTIVE REQUEST ALLOWED -->
+                    <button class="btn btn-disabled btn-sm" title="Another tenant has an active request on this property">Request Unavailable</button>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Property 7: SHOWCASE BUSINESS RULE -> HOSTEL IS "FULL" (0 vacant beds) -->
+              <article class="property-card">
+                <div class="property-image-wrap">
+                  <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=700&auto=format&fit=crop&q=80" alt="Al-Haram Girls Hostel Gulshan Karachi" class="property-image">
+                  <div class="property-badges-overlay">
+                    <span class="badge badge-girls">Girls Hostel</span>
+                  </div>
+                  <div class="property-status-overlay">
+                    <!-- Category Badge: FULL -->
+                    <span class="badge badge-full">Full (0 Vacant Beds)</span>
+                  </div>
+                </div>
+                <div class="property-card-body">
+                  <div class="property-price-row">
+                    <div class="property-price">PKR 17,500 <span>/ bed / mo</span></div>
+                    <div class="property-advance">Adv: PKR 8,000</div>
+                  </div>
+                  <h3 class="property-title"><a href="property-details.html">Al-Haram Executive Girls Hostel (Near Sir Syed)</a></h3>
+                  <div class="property-location">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    Gulshan Block 6 (Address protected)
+                  </div>
+                  <div class="property-features">
+                    <div class="property-feature-item">3-Sharing</div>
+                    <div class="property-feature-item">3 Meals</div>
+                    <div class="property-feature-item">Fully Booked</div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-broker-meta">
+                      <div class="broker-avatar" style="background-color: var(--girls-hostel-soft); color: var(--girls-hostel);">NZ</div>
+                      <div class="broker-info-text">
+                        <span class="broker-name">Nargis Zafar</span>
+                        <span class="broker-agency">Al-Haram Student Hostels</span>
+                      </div>
+                    </div>
+                    <a href="property-details.html" class="btn btn-outline btn-sm">View History</a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- Property 8: Studio Apartment in Saddar -->
+              <article class="property-card">
+                <div class="property-image-wrap">
+                  <img src="https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=700&auto=format&fit=crop&q=80" alt="Studio Apartment Saddar Karachi" class="property-image">
+                  <div class="property-badges-overlay">
+                    <span class="badge badge-apartment">Studio</span>
+                    <span class="badge badge-verified">Near Red Bus</span>
+                  </div>
+                  <div class="property-status-overlay">
+                    <span class="badge badge-available">Available</span>
+                  </div>
+                </div>
+                <div class="property-card-body">
+                  <div class="property-price-row">
+                    <div class="property-price">PKR 25,000 <span>/ mo</span></div>
+                    <div class="property-advance">Adv: PKR 50,000</div>
+                  </div>
+                  <h3 class="property-title"><a href="property-details.html">Central 1-Bed Studio Flat, Regal Saddar</a></h3>
+                  <div class="property-location">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    Saddar, Near Empress Market & Metro
+                  </div>
+                  <div class="property-features">
+                    <div class="property-feature-item">1 Bed</div>
+                    <div class="property-feature-item">1 Bath</div>
+                    <div class="property-feature-item">Ideal for Singles</div>
+                  </div>
+                  <div class="property-card-footer">
+                    <div class="property-broker-meta">
+                      <div class="broker-avatar">WA</div>
+                      <div class="broker-info-text">
+                        <span class="broker-name">Waqas Ahmed</span>
+                        <span class="broker-agency">Heritage Downtown Realty</span>
+                      </div>
+                    </div>
+                    <a href="property-details.html" class="btn btn-outline btn-sm">View Details</a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+
+          </section>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ========================================================================
+       GLOBAL SITE FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container-wide">
+      
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-text">
+            <span class="brand-name">Flatora<span>.</span></span>
+            <span class="brand-tagline">Naya shehar, apna thikana.</span>
+          </div>
+          <p class="footer-desc">
+            Karachi's dedicated zero-commission housing discovery portal for newcomers, university students and working individuals.
+          </p>
+          <div class="footer-city-pill">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            Karachi, Pakistan (PKR) Only
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" class="footer-link">Home Portal</a></li>
+            <li><a href="listings.html" class="footer-link">Browse Properties</a></li>
+            <li><a href="search-results.html" class="footer-link">Search Results</a></li>
+            <li><a href="my-requests.html" class="footer-link">Tenant Requests</a></li>
+            <li><a href="contact.html" class="footer-link">About & Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">User Roles</h4>
+          <ul class="footer-links">
+            <li><a href="login.html" class="footer-link">Tenant Sign In</a></li>
+            <li><a href="broker-dashboard.html" class="footer-link">Broker Dashboard</a></li>
+            <li><a href="add-property.html" class="footer-link">Add New Listing</a></li>
+            <li><a href="admin-dashboard.html" class="footer-link">Admin Oversight</a></li>
+            <li><a href="login.html" class="footer-link">Register Agency</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Project Standards</h4>
+          <p style="font-size: 0.85rem; color: #94A3B8; line-height: 1.5; margin-bottom: 0.75rem;">
+            Semester Academic Project developed strictly in compliance with course criteria:
+          </p>
+          <div class="footer-disclaimer">
+            <strong>Pure HTML5 & CSS3:</strong> Zero JavaScript, Zero frameworks, Zero external backend. Double-click offline browser ready.
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Flatora Karachi. Designed with deep teal, warm amber and cream.
+        </div>
+        <div>
+          <span>Karachi Localities: Gulshan &bull; Johar &bull; Nazimabad &bull; PECHS &bull; DHA &bull; Clifton</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+</body>
+</html>
